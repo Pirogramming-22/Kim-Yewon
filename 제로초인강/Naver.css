@@ -1,0 +1,247 @@
+:root {
+  --color_title: #080808;
+  --color_title_rgb: 8, 8, 8;
+  --color_body: #101010;
+  --color_body_rgb: 16, 16, 16;
+  --color_caption1: #404040;
+  --color_caption1_rgb: 64, 64, 64;
+  --color_caption2: #606060;
+  --color_caption2_rgb: 96, 96, 96;
+  --color_caption3: #555558;
+  --color_caption3_rgb: 85, 85, 88;
+  --color_search: #000;
+  --color_search_rgb: 0, 0, 0;
+  --color_border_out: #e3e5e8;
+  --color_border_out_rgb: 227, 229, 232;
+  --color_border_in: #ebebeb;
+  --color_border_in_rgb: 235, 235, 235;
+  --color_border_in_divider: #ebebeb;
+  --color_border_in_divider_rgb: 235, 235, 235;
+  --color_border_in_exception: #ebebeb;
+  --color_border_in_exception_rgb: 235, 235, 235;
+  --color_button_border: #dadcdf;
+  --color_button_border_rgb: 218, 220, 223;
+  --color_dot_divider: #d3d5d7;
+  --color_dot_divider_rgb: 211, 213, 215;
+  --color_block_bg: #fff;
+  --color_block_bg_rgb: 255, 255, 255;
+  --color_board_bg: #f4f6fa;
+  --color_board_bg_rgb: 244, 246, 250;
+  --color_option_bg: #f5f7f8;
+  --color_option_bg_rgb: 245, 247, 248;
+  --color_login_bg: #fafbfb;
+  --color_login_bg_rgb: 250, 251, 251;
+  --color_menu_widget_bg: #fff;
+  --color_menu_widget_bg_rgb: 255, 255, 255;
+  --color_setting_bg: #fff;
+  --color_setting_bg_rgb: 255, 255, 255;
+  --color_button1_bg: #fff;
+  --color_button1_bg_rgb: 255, 255, 255;
+  --color_button2_bg: #fff;
+  --color_button2_bg_rgb: 255, 255, 255;
+  --color_news: #3a67ea;
+  --color_news_rgb: 58, 103, 234;
+  --color_news_econ_stay: #909aab;
+  --color_news_econ_stay_rgb: 144, 154, 171;
+  --color_news_econ_down: #4f67d6;
+  --color_news_econ_down_rgb: 79, 103, 214;
+  --color_live_news_price: #f4361e;
+  --color_live_news_price_rgb: 244, 54, 30;
+  --color_enter: #e538e2;
+  --color_enter_rgb: 229, 56, 226;
+  --color_enter_bg: #f2f1fb;
+  --color_enter_bg_rgb: 242, 241, 251;
+  --color_sports: #1f65ef;
+  --color_sports_rgb: 31, 101, 239;
+  --color_sports_bg: #f4f7fe;
+  --color_sports_bg_rgb: 244, 247, 254;
+  --color_econ: #008f76;
+  --color_econ_rgb: 0, 143, 118;
+  --color_calendar: #eb5b5b;
+  --color_calendar_rgb: 235, 91, 91;
+  --color_dic: #031f5f;
+  --color_dic_rgb: 3, 31, 95;
+  --color_shop: #9858f5;
+  --color_shop_rgb: 152, 88, 245;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+}
+#Wrapper {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerLeft {
+  display: flex;
+}
+.headerRight {
+  display: flex;
+}
+#icon {
+  background-image: url(../제로초인강/sp_main.png);
+  width: 35px;
+  height: 35px;
+  background-size: 463px 440px;
+  background-repeat: no-repeat;
+}
+.hamburger {
+  background-position: -311px -166px;
+  margin-right: 1rem;
+}
+.payIcon {
+  background-position: -248px -260px;
+}
+.talkIcon {
+  background-position: -96px -315px;
+  margin-right: 1rem;
+}
+.alarmIcon {
+  background-position: -311px -230px;
+  margin-right: 1rem;
+}
+.shopIcon {
+  background-position: -33px -314px;
+}
+
+.SearchWrapper {
+  width: 706px;
+  height: 58px;
+  border: 1px solid #03c75a;
+  border-radius: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.SearchWrapper input {
+  height: 50px;
+  padding: 17px 0;
+  font-size: 1.5rem;
+  line-height: 24px;
+  margin-left: 2rem;
+  border: none;
+}
+.SearchWrapper > input::placeholder {
+  color: #e3e5e8;
+}
+.SearchWrapper > input:focus {
+  border: none; /* 테두리 제거 */
+  outline: none; /* 브라우저 기본 포커스 스타일 제거 */
+}
+
+.SearchWrapper > input::-ms-clear {
+  display: none; /* IE 브라우저에서 'x' 닫기 버튼 제거 */
+}
+
+.SearchWrapper > input::-webkit-search-cancel-button {
+  display: none; /* 크롬, 사파리에서 'x' 닫기 버튼 제거 */
+}
+#searchIcon {
+  background-image: url(../제로초인강/sp_main.png);
+  background-size: 463px 440px;
+  background-repeat: no-repeat;
+}
+.SearchIconWrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+  width: 6rem;
+  justify-content: space-between;
+}
+.keyboardIcon {
+  background-position: -148px -301px;
+  width: 24px;
+  height: 14px;
+}
+.arrowDown {
+  background-position: -221px -183px;
+  width: 10px;
+  height: 6px;
+}
+.searchIcon {
+  background-position: -405px -77px;
+  width: 25px;
+  height: 27px;
+}
+.topCatagoryWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.catagoryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 60px;
+}
+
+.catagoryItem .icon {
+  background-image: url(../제로초인강/sp_main.png);
+  width: 40px;
+  height: 40px;
+  background-size: 452px 436px;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px 1px #e3e5e8;
+}
+
+.catagoryItem span {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #606060;
+}
+
+.catagoryItem:nth-child(1) .icon {
+  background-position: -199px -216px;
+}
+
+.catagoryItem:nth-child(2) .icon {
+  background-position: -39px -217px;
+}
+
+.catagoryItem:nth-child(3) .icon {
+  background-position: 1px -216px;
+}
+
+.catagoryItem:nth-child(4) .icon {
+  background-position: -39px -257px;
+}
+
+.catagoryItem:nth-child(5) .icon {
+  background-position: -263px -202px;
+}
+
+.catagoryItem:nth-child(6) .icon {
+  background-position: -120px -258px;
+}
+
+.catagoryItem:nth-child(7) .icon {
+  background-position: 1px -258px;
+}
+
+.catagoryItem:nth-child(8) .icon {
+  background-position: -262px 1px;
+}
+
+.catagoryItem:nth-child(9) .icon {
+  background-position: -160px -257px;
+}
+
+.catagoryItem:nth-child(10) .icon {
+  background-position: -263px -161px;
+}
+
+.catagoryItem:nth-child(11) .icon {
+  background-position: -263px -161px;
+}
