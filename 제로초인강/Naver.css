@@ -245,3 +245,69 @@ header {
 .catagoryItem:nth-child(11) .icon {
   background-position: -263px -161px;
 }
+
+#main {
+  display: flex;
+}
+#mainLeft {
+  width: 830px;
+  margin-right: 30px;
+}
+#mainRight {
+  width: 420px;
+}
+
+#mainLeftAd,
+#mainRightAd,
+#mainRight2Ad,
+#mainRight3Ad {
+  background: gray;
+}
+
+aside[id$="Ad"] {
+  border-radius: 8px;
+}
+#mainLeftAd {
+  height: 130px;
+  margin-bottom: 16px;
+}
+section[id^="main"] {
+  box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0.04);
+  border-radius: 8px;
+}
+#mainNewstand {
+  height: 426px;
+  margin-bottom: 16px;
+}
+#mainShopping {
+  height: 560px;
+}
+#mainLogin {
+  height: 125.133px;
+  margin-bottom: 16px;
+  padding: 21px 20px 18px;
+}
+#mainRightAd {
+  height: 240px;
+  margin-bottom: 16px;
+}
+#mainRight2Ad {
+  height: 80px;
+  margin-bottom: 16px;
+}
+#mainRight3Ad {
+  height: 172px;
+  margin-bottom: 16px;
+}
+#mainWeather,
+#mainStock {
+  height: 236px;
+  margin-bottom: 16px;
+  padding: 0px 18px;
+}
+#mainWeather > header,
+#mainStock > header {
+  width: 384px;
+  padding: 6px 0px;
+  border-bottom: 1px solid var(--color_border_in);
+}
