@@ -338,6 +338,7 @@ section[id^="main"] {
   line-height: 26px;
   margin-bottom: 1rem;
   width: 750px;
+  height: 50px;
 }
 #mainNewstandGray a,
 #main-shopping-gray a {
@@ -374,9 +375,61 @@ section[id^="main"] {
   margin: 12px 6px 0 6px;
   border-radius: 50%;
 }
+@keyframes newsAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  16.666% {
+    transform: translateY(0);
+  }
+  33.333% {
+    transform: translateY(-26px);
+  }
+  50% {
+    transform: translateY(-26px);
+  }
+  66.666% {
+    transform: translateY(-52px);
+  }
+  83.333% {
+    transform: translateY(-52px);
+  }
+  91.66666% {
+    transform: translateY(-65px);
+  }
+  91.66667% {
+    transform: translateY(13px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#main-newstand-animation-target {
+  width: 300px; /* div의 고정된 너비 */
+  height: 26px; /* 애니메이션 글씨가 한 줄로 표현될 높이 설정 */
+  display: inline-block;
+  overflow: hidden; /* 자식 요소가 div를 벗어나지 않도록 설정 */
+  position: relative; /* 위치 기준 */
+}
+
+#main-newstand-animation-target > div {
+  display: inline-block;
+  animation: newsAnimation 5s linear infinite; /* 애니메이션 유지 */
+  position: relative; /* 부모의 위치를 기준으로 이동 */
+  white-space: nowrap; /* 텍스트가 줄바꿈 없이 한 줄로 표현 */
+  width: 300px;
+}
+#main-newstand-animation-target a {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px;
+  display: inline-block;
+  overflow: hidden;
+}
 #mainNewstandAnimation {
   padding-left: 25px;
   position: relative;
+  width: 300px;
 }
 #mainNewstandAnimation::before {
   content: "";
