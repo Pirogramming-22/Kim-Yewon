@@ -285,6 +285,29 @@ section[id^="main"] {
   align-items: center;
   justify-content: center;
 }
+#mainNewstandContainer .dot::before {
+  content: "";
+  display: inline-block;
+  background-color: var(--color_dot_divider);
+  margin: 9px 7px 0;
+  border-radius: 50%;
+  vertical-align: top;
+  width: 4px;
+  height: 4px;
+}
+#mainNewstandContainer .slash::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background-color: #d3d5d7;
+  background-color: var(--color_dot_divider);
+  -webkit-transform: skewX(-15deg);
+  -ms-transform: skewX(-15deg);
+  transform: skewX(-15deg);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 #mainNewstand header {
   padding: 18px 20px 17px;
   width: 790px;
@@ -315,6 +338,57 @@ section[id^="main"] {
   text-decoration: none;
   color: rgb(16, 16, 16);
 }
+#mainNewstandGray .left > a:first-of-type::after {
+  content: "";
+  background-image: url(../제로초인강/sp_main.png);
+  margin: 10px 0 0 5px;
+  background-position: -221px -183px;
+  width: 10px;
+  height: 6px;
+  background-size: 463px 440px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+#mainNewstandGray .left {
+  flex: 1;
+  display: flex;
+}
+#mainNewstandAnimation > a:first-of-type {
+  width: 85.5px;
+  vertical-align: 5px;
+}
+#mainNewstandAnimation > a:first-of-type::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background-color: #d3d5d7;
+  background-color: var(--color_dot_divider);
+  margin: 12px 6px 0 6px;
+  border-radius: 50%;
+}
+#mainNewstandAnimation {
+  padding-left: 25px;
+  position: relative;
+}
+#mainNewstandAnimation::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  background-color: #d3d5d7;
+  width: 1px;
+  height: 12px;
+}
+#mainNewstandAnimation > a:last-of-type {
+  text-overflow: ellipsis;
+  width: 420px;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: -3px;
+}
 #mainNewstand footer {
   padding: 10px 0 11px;
   border-top: 1px solid var(--color_border_in);
@@ -328,8 +402,7 @@ section[id^="main"] {
   height: 223.6px;
   grid-template-rows: 56px 56px 56px 56px;
   grid-template-columns: 131.34px 131.34px 131.34px 131.34px 131.34px 131.34px;
-  justify-content: center;
-  align-items: center;
+
   border-top: 1px solid var(--color_border_in);
   border-left: 1px solid var(--color_border_in);
   border-radius: 4px;
@@ -340,6 +413,8 @@ section[id^="main"] {
   width: 131.34px;
   height: 56px;
   border-radius: 4px;
+  text-align: center;
+  line-height: 56px;
 }
 #mainShopping {
   height: 560px;
