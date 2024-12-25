@@ -1,0 +1,716 @@
+:root {
+  --color_title: #080808;
+  --color_title_rgb: 8, 8, 8;
+  --color_body: #101010;
+  --color_body_rgb: 16, 16, 16;
+  --color_caption1: #404040;
+  --color_caption1_rgb: 64, 64, 64;
+  --color_caption2: #606060;
+  --color_caption2_rgb: 96, 96, 96;
+  --color_caption3: #555558;
+  --color_caption3_rgb: 85, 85, 88;
+  --color_search: #000;
+  --color_search_rgb: 0, 0, 0;
+  --color_border_out: #e3e5e8;
+  --color_border_out_rgb: 227, 229, 232;
+  --color_border_in: #ebebeb;
+  --color_border_in_rgb: 235, 235, 235;
+  --color_border_in_divider: #ebebeb;
+  --color_border_in_divider_rgb: 235, 235, 235;
+  --color_border_in_exception: #ebebeb;
+  --color_border_in_exception_rgb: 235, 235, 235;
+  --color_button_border: #dadcdf;
+  --color_button_border_rgb: 218, 220, 223;
+  --color_dot_divider: #d3d5d7;
+  --color_dot_divider_rgb: 211, 213, 215;
+  --color_block_bg: #fff;
+  --color_block_bg_rgb: 255, 255, 255;
+  --color_board_bg: #f4f6fa;
+  --color_board_bg_rgb: 244, 246, 250;
+  --color_option_bg: #f5f7f8;
+  --color_option_bg_rgb: 245, 247, 248;
+  --color_login_bg: #fafbfb;
+  --color_login_bg_rgb: 250, 251, 251;
+  --color_menu_widget_bg: #fff;
+  --color_menu_widget_bg_rgb: 255, 255, 255;
+  --color_setting_bg: #fff;
+  --color_setting_bg_rgb: 255, 255, 255;
+  --color_button1_bg: #fff;
+  --color_button1_bg_rgb: 255, 255, 255;
+  --color_button2_bg: #fff;
+  --color_button2_bg_rgb: 255, 255, 255;
+  --color_news: #3a67ea;
+  --color_news_rgb: 58, 103, 234;
+  --color_news_econ_stay: #909aab;
+  --color_news_econ_stay_rgb: 144, 154, 171;
+  --color_news_econ_down: #4f67d6;
+  --color_news_econ_down_rgb: 79, 103, 214;
+  --color_live_news_price: #f4361e;
+  --color_live_news_price_rgb: 244, 54, 30;
+  --color_enter: #e538e2;
+  --color_enter_rgb: 229, 56, 226;
+  --color_enter_bg: #f2f1fb;
+  --color_enter_bg_rgb: 242, 241, 251;
+  --color_sports: #1f65ef;
+  --color_sports_rgb: 31, 101, 239;
+  --color_sports_bg: #f4f7fe;
+  --color_sports_bg_rgb: 244, 247, 254;
+  --color_econ: #008f76;
+  --color_econ_rgb: 0, 143, 118;
+  --color_calendar: #eb5b5b;
+  --color_calendar_rgb: 235, 91, 91;
+  --color_dic: #031f5f;
+  --color_dic_rgb: 3, 31, 95;
+  --color_shop: #9858f5;
+  --color_shop_rgb: 152, 88, 245;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#header {
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+}
+#Wrapper {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerLeft {
+  display: flex;
+}
+.headerRight {
+  display: flex;
+}
+#icon {
+  background-image: url(../제로초인강/sp_main.png);
+  width: 35px;
+  height: 35px;
+  background-size: 463px 440px;
+  background-repeat: no-repeat;
+}
+.hamburger {
+  background-position: -311px -166px;
+  margin-right: 1rem;
+}
+.payIcon {
+  background-position: -248px -260px;
+}
+.talkIcon {
+  background-position: -96px -315px;
+  margin-right: 1rem;
+}
+.alarmIcon {
+  background-position: -311px -230px;
+  margin-right: 1rem;
+}
+.shopIcon {
+  background-position: -33px -314px;
+}
+
+.SearchWrapper {
+  width: 706px;
+  height: 58px;
+  border: 1px solid #03c75a;
+  border-radius: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.SearchWrapper input {
+  height: 50px;
+  padding: 17px 0;
+  font-size: 1.5rem;
+  line-height: 24px;
+  margin-left: 2rem;
+  border: none;
+}
+.SearchWrapper > input::placeholder {
+  color: #e3e5e8;
+}
+.SearchWrapper > input:focus {
+  border: none; /* 테두리 제거 */
+  outline: none; /* 브라우저 기본 포커스 스타일 제거 */
+}
+
+.SearchWrapper > input::-ms-clear {
+  display: none; /* IE 브라우저에서 'x' 닫기 버튼 제거 */
+}
+
+.SearchWrapper > input::-webkit-search-cancel-button {
+  display: none; /* 크롬, 사파리에서 'x' 닫기 버튼 제거 */
+}
+#searchIcon {
+  background-image: url(../제로초인강/sp_main.png);
+  background-size: 463px 440px;
+  background-repeat: no-repeat;
+}
+.SearchIconWrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+  width: 6rem;
+  justify-content: space-between;
+}
+.keyboardIcon {
+  background-position: -148px -301px;
+  width: 24px;
+  height: 14px;
+}
+.arrowDown {
+  background-position: -221px -183px;
+  width: 10px;
+  height: 6px;
+}
+.searchIcon {
+  background-position: -405px -77px;
+  width: 25px;
+  height: 27px;
+}
+.topCatagoryWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.catagoryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 60px;
+}
+
+.catagoryItem .icon {
+  background-image: url(../제로초인강/sp_main.png);
+  width: 40px;
+  height: 40px;
+  background-size: 452px 436px;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px 1px #e3e5e8;
+}
+
+.catagoryItem span {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #606060;
+}
+
+.catagoryItem:nth-child(1) .icon {
+  background-position: -199px -216px;
+}
+
+.catagoryItem:nth-child(2) .icon {
+  background-position: -39px -217px;
+}
+
+.catagoryItem:nth-child(3) .icon {
+  background-position: 1px -216px;
+}
+
+.catagoryItem:nth-child(4) .icon {
+  background-position: -39px -257px;
+}
+
+.catagoryItem:nth-child(5) .icon {
+  background-position: -263px -202px;
+}
+
+.catagoryItem:nth-child(6) .icon {
+  background-position: -120px -258px;
+}
+
+.catagoryItem:nth-child(7) .icon {
+  background-position: 1px -258px;
+}
+
+.catagoryItem:nth-child(8) .icon {
+  background-position: -262px 1px;
+}
+
+.catagoryItem:nth-child(9) .icon {
+  background-position: -160px -257px;
+}
+
+.catagoryItem:nth-child(10) .icon {
+  background-position: -263px -161px;
+}
+
+.catagoryItem:nth-child(11) .icon {
+  background-position: -263px -161px;
+}
+
+#main {
+  display: flex;
+}
+#mainLeft {
+  width: 830px;
+  margin-right: 30px;
+}
+#mainRight {
+  width: 420px;
+}
+
+#mainLeftAd,
+#mainRightAd,
+#mainRight2Ad,
+#mainRight3Ad {
+  background: gray;
+}
+
+aside[id$="Ad"] {
+  border-radius: 8px;
+}
+#mainLeftAd {
+  height: 130px;
+  margin-bottom: 16px;
+}
+section[id^="main"] {
+  box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0.04);
+  border-radius: 8px;
+}
+#mainNewstand {
+  height: 426px;
+  margin-bottom: 16px;
+}
+#mainNewstandContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#mainNewstandContainer .dot::before {
+  content: "";
+  display: inline-block;
+  background-color: var(--color_dot_divider);
+  margin: 9px 7px 0;
+  border-radius: 50%;
+  vertical-align: top;
+  width: 4px;
+  height: 4px;
+}
+#mainNewstandContainer .slash::before,
+#main-shopping .slash::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background-color: #d3d5d7;
+  background-color: var(--color_dot_divider);
+  -webkit-transform: skewX(-15deg);
+  -ms-transform: skewX(-15deg);
+  transform: skewX(-15deg);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+#mainNewstand header,
+#main-shopping header {
+  padding: 18px 20px 17px;
+  width: 790px;
+}
+#mainNewstand header a,
+#main-shopping header a {
+  text-decoration: none;
+  color: rgba(8, 8, 8, 0.5);
+  font-size: 16.9px;
+  font-weight: 800;
+}
+#mainNewstand header a:hover,
+#main-shopping header a:hover {
+  text-decoration: underline;
+}
+.bold {
+  color: black !important;
+}
+#mainNewstandGray,
+#main-shopping-gray {
+  display: flex;
+  background-color: var(--color_option_bg);
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin: 0 20px;
+  line-height: 26px;
+  margin-bottom: 1rem;
+  width: 750px;
+  height: 50px;
+}
+#mainNewstandGray a,
+#main-shopping-gray a {
+  text-decoration: none;
+  color: rgb(16, 16, 16);
+}
+#mainNewstandGray .left > a:first-of-type::after {
+  content: "";
+  background-image: url(../제로초인강/sp_main.png);
+  margin: 10px 0 0 5px;
+  background-position: -221px -183px;
+  width: 10px;
+  height: 6px;
+  background-size: 463px 440px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+#mainNewstandGray .left,
+#main-shopping-gray .left {
+  flex: 1;
+  display: flex;
+}
+#mainNewstandAnimation > a:first-of-type {
+  width: 85.5px;
+  vertical-align: 5px;
+}
+#mainNewstandAnimation > a:first-of-type::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background-color: #d3d5d7;
+  background-color: var(--color_dot_divider);
+  margin: 12px 6px 0 6px;
+  border-radius: 50%;
+}
+@keyframes newsAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  16.666% {
+    transform: translateY(0);
+  }
+  33.333% {
+    transform: translateY(-26px);
+  }
+  50% {
+    transform: translateY(-26px);
+  }
+  66.666% {
+    transform: translateY(-52px);
+  }
+  83.333% {
+    transform: translateY(-52px);
+  }
+  91.66666% {
+    transform: translateY(-65px);
+  }
+  91.66667% {
+    transform: translateY(13px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#main-newstand-animation-target {
+  width: 300px; /* div의 고정된 너비 */
+  height: 26px; /* 애니메이션 글씨가 한 줄로 표현될 높이 설정 */
+  display: inline-block;
+  overflow: hidden; /* 자식 요소가 div를 벗어나지 않도록 설정 */
+  position: relative; /* 위치 기준 */
+}
+
+#main-newstand-animation-target > div {
+  display: inline-block;
+  animation: newsAnimation 5s linear infinite; /* 애니메이션 유지 */
+  position: relative; /* 부모의 위치를 기준으로 이동 */
+  white-space: nowrap; /* 텍스트가 줄바꿈 없이 한 줄로 표현 */
+  width: 300px;
+}
+#main-newstand-animation-target a {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px;
+  display: inline-block;
+  overflow: hidden;
+}
+#mainNewstandAnimation {
+  padding-left: 25px;
+  position: relative;
+  width: 300px;
+}
+#mainNewstandAnimation::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  background-color: #d3d5d7;
+  width: 1px;
+  height: 12px;
+}
+#mainNewstandAnimation > a:last-of-type {
+  text-overflow: ellipsis;
+  width: 420px;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: -3px;
+}
+.left-section footer {
+  border-top: 1px solid var(--color_border_in);
+  padding: 10px 0 11px;
+  font-size: 13.65px;
+  line-height: 35px;
+  font-weight: 600;
+  color: #606060;
+  color: var(--color_caption2);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#mainNewstand footer .list,
+#mainNewstand footer .grid {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  top: 0;
+  background-color: transparent;
+}
+#mainNewstand footer .list {
+  right: 49px;
+  padding: 18px 9px 18px 20px;
+}
+#mainNewstand footer .list::before {
+  content: "";
+  display: inline-block;
+  background: url(./sp_main.png);
+  background-size: 422px 405px;
+  background-position: -199px -343px;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+#mainNewstand footer .list:hover::before {
+  background-position: -86px -368px;
+}
+#mainNewstand footer .grid {
+  right: 0;
+  padding: 18px 20px 18px 9px;
+}
+#mainNewstand footer .grid::before {
+  content: "";
+  display: inline-block;
+  background: url(./sp_main.png);
+  background-size: 422px 405px;
+  background-position: -364px -367px;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+.left-section footer .prev,
+.left-section footer .next {
+  background: none;
+  border: none;
+  content: "";
+  width: 36px;
+  height: 36px;
+  border: 1px solid #dadcdf;
+  border: 1px solid var(--color_button_border);
+  background-color: #fff;
+  background-color: var(--color_button1_bg);
+  display: inline-block;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-section footer .prev::before {
+  transform: rotate(180deg);
+}
+.left-section footer .prev::before,
+.left-section footer .next::before {
+  content: "";
+  display: block;
+  background-image: url(../제로초인강/sp_main.png);
+  background-size: 452px 436px;
+  background-position: -198px -331px;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 12px;
+}
+.left-section footer .text {
+  padding: 0 16px;
+  width: 156px;
+  text-align: center;
+}
+.left-section footer .hot {
+  color: #9858f5;
+}
+.left-section footer .news {
+  color: var(--color_news);
+}
+.left-section footer .total {
+  color: rgba(96, 96, 96, 0.5);
+}
+#mainNewstandGrid {
+  display: grid;
+  width: 790px;
+  height: 223.6px;
+  grid-template-rows: 56px 56px 56px 56px;
+  grid-template-columns: 131.34px 131.34px 131.34px 131.34px 131.34px 131.34px;
+  border-top: 1px solid var(--color_border_in);
+  border-left: 1px solid var(--color_border_in);
+  border-radius: 4px;
+}
+#mainNewstandGrid div {
+  border-bottom: 1px solid var(--color_border_in);
+  border-right: 1px solid var(--color_border_in);
+  width: 131.34px;
+  height: 56px;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 56px;
+}
+#main-shopping {
+  height: 560px;
+  display: flex;
+  flex-flow: column;
+}
+#main-shopping-top {
+}
+#main-shopping footer .text {
+  min-width: 176px;
+}
+#main-shopping-gray {
+  display: flex;
+  align-items: center;
+}
+#main-shopping-gray .left {
+  display: flex;
+  background-color: var(--color_option_bg);
+}
+#main-shopping-gray .right {
+  margin-left: auto;
+  padding: 10px 0;
+}
+#main-shopping-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-rows: 90px 95px 170px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 250px;
+  column-gap: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#main-shopping-grid .item {
+  line-height: 20px;
+  letter-spacing: -0.8px;
+  font-size: 14px;
+}
+#main-shopping-grid .item > .image {
+  width: 115px;
+  height: 115px;
+  border-radius: 4px;
+  background-color: gray;
+  margin-bottom: 10px;
+}
+#main-shopping-grid .item > .text {
+  text-align: left;
+}
+.item:nth-child(1),
+.item:nth-child(2),
+.item:nth-child(3),
+.item:nth-child(4) {
+  grid-row: 1 / span 2;
+}
+.item:nth-child(5),
+.item:nth-child(6),
+.item:nth-child(11) > div:first-child {
+  padding: 10px 12px 5px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(245, 248, 251, 0.6);
+}
+.item:nth-child(6) {
+  margin: 11px 0;
+}
+.item:nth-child(11) > div:first-child {
+  height: 110px;
+  margin-bottom: 10px;
+}
+#mainLogin {
+  height: 125.133px;
+  margin-bottom: 16px;
+  padding: 21px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#mainLogin > :nth-child(1) {
+  font-size: 14.7px;
+  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕",
+    helvetica, "Apple SD Gothic Neo", sans-serif;
+  font-weight: 500;
+  color: var(--color_body);
+}
+#mainLogin > :nth-child(2) {
+  margin-top: 13px;
+  padding: 14px 0;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  background-color: #03c75a;
+  width: 377.867px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#mainLogin > :nth-child(3) {
+  color: var(--color_caption2);
+  margin-top: 16px;
+  font-size: 13.65px;
+}
+#mainLogin > div:nth-child(2) > span:nth-child(1) {
+  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕",
+    helvetica, "Apple SD Gothic Neo", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  color: white;
+  margin-right: 8px;
+}
+
+#mainLogin > div:nth-child(2) > span:nth-child(2) {
+  color: white;
+  font-size: 14.7px;
+}
+#mainLogin > div:nth-child(3) > span:nth-child(-n + 2) {
+  border-right: 1px solid var(--color_border_in);
+  padding: 0 1rem;
+}
+#mainLogin > div:nth-child(3) > span:nth-child(3) {
+  padding: 0 1rem;
+}
+#mainLogin > div:nth-child(3) > span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#mainRightAd {
+  height: 240px;
+  margin-bottom: 16px;
+}
+#mainRight2Ad {
+  height: 80px;
+  margin-bottom: 16px;
+}
+#mainRight3Ad {
+  height: 172px;
+  margin-bottom: 16px;
+}
+#mainWeather,
+#mainStock {
+  height: 236px;
+  margin-bottom: 16px;
+  padding: 0px 18px;
+}
+#mainWeather > header,
+#mainStock > header {
+  width: 384px;
+  padding: 6px 0px;
+  border-bottom: 1px solid var(--color_border_in);
+}
