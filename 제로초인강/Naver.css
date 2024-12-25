@@ -69,7 +69,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
-header {
+#header {
   width: 1280px;
   display: flex;
   justify-content: space-between;
@@ -279,6 +279,68 @@ section[id^="main"] {
   height: 426px;
   margin-bottom: 16px;
 }
+#mainNewstandContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#mainNewstand header {
+  padding: 18px 20px 17px;
+  width: 790px;
+}
+#mainNewstand header a {
+  text-decoration: none;
+  color: rgba(8, 8, 8, 0.5);
+  font-size: 16.9px;
+  font-weight: 800;
+}
+#mainNewstand header a:hover {
+  text-decoration: underline;
+}
+.bold {
+  color: black !important;
+}
+#mainNewstandGray {
+  display: flex;
+  background-color: var(--color_option_bg);
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin: 0 20px;
+  line-height: 26px;
+  margin-bottom: 1rem;
+  width: 750px;
+}
+#mainNewstandGray a {
+  text-decoration: none;
+  color: rgb(16, 16, 16);
+}
+#mainNewstand footer {
+  padding: 10px 0 11px;
+  border-top: 1px solid var(--color_border_in);
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+#mainNewstandGrid {
+  display: grid;
+  width: 790px;
+  height: 223.6px;
+  grid-template-rows: 56px 56px 56px 56px;
+  grid-template-columns: 131.34px 131.34px 131.34px 131.34px 131.34px 131.34px;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--color_border_in);
+  border-left: 1px solid var(--color_border_in);
+  border-radius: 4px;
+}
+#mainNewstandGrid div {
+  border-bottom: 1px solid var(--color_border_in);
+  border-right: 1px solid var(--color_border_in);
+  width: 131.34px;
+  height: 56px;
+  border-radius: 4px;
+}
 #mainShopping {
   height: 560px;
 }
@@ -307,6 +369,7 @@ section[id^="main"] {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 #mainLogin > :nth-child(3) {
   color: var(--color_caption2);
@@ -333,6 +396,10 @@ section[id^="main"] {
 }
 #mainLogin > div:nth-child(3) > span:nth-child(3) {
   padding: 0 1rem;
+}
+#mainLogin > div:nth-child(3) > span:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 #mainRightAd {
   height: 240px;
