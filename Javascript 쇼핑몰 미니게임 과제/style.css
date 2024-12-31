@@ -11,3 +11,61 @@
 * {
   box-sizing: border-box;
 }
+html {
+  background-color: var(--color-black);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+button {
+  height: 2.5rem;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+button img {
+  width: 100%;
+  height: 100%;
+}
+.colorBtn {
+  width: 3.3rem;
+  height: 2.2rem;
+}
+button.colorBtn.blue {
+  background-color: var(--color-blue);
+}
+button.colorBtn.yellow {
+  background-color: var(--color-yellow);
+}
+button.colorBtn.pink {
+  background-color: var(--color-pink);
+}
+
+#itemContainer {
+  cursor: pointer;
+  background-color: var(--color-white);
+  width: 25rem;
+  padding: 0.3rem;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
+  font-family: "Times New Roman", Times, serif;
+}
+#itemContainer img {
+  height: 2.2rem;
+  padding-inline: 1rem;
+}
+#btn {
+  background-color: var(--color-blue);
+}
