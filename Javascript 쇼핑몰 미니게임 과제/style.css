@@ -49,8 +49,10 @@ button.colorBtn.yellow {
 button.colorBtn.pink {
   background-color: var(--color-pink);
 }
-
-#itemContainer {
+.items {
+  padding: 0;
+}
+.item {
   cursor: pointer;
   background-color: var(--color-white);
   width: 25rem;
@@ -62,7 +64,7 @@ button.colorBtn.pink {
   font-size: 0.9rem;
   font-family: "Times New Roman", Times, serif;
 }
-#itemContainer img {
+.items img {
   height: 2.2rem;
   padding-inline: 1rem;
 }
