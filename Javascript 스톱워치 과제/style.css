@@ -1,0 +1,78 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  width: 25px;
+  height: 25px;
+}
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+.timeContainer {
+  width: 21rem;
+  height: 13rem;
+  background-color: gray;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.timeWrapper {
+  width: 17rem;
+  height: 5rem;
+  background-color: whitesmoke;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  border: none;
+  margin-inline: 1rem;
+}
+.recordWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25rem;
+}
+.recordTop {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: gray;
+  height: 3rem;
+  border-radius: 1rem 1rem 0 0;
+}
+.recordTop span {
+  margin-left: 4.5rem;
+}
+.recordItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 5px;
+}
+.recordItem:nth-child(2) {
+  margin-left: 9.1rem;
+}
+.recordItem > span:nth-child(2) {
+  margin-left: 4.3rem;
+}
