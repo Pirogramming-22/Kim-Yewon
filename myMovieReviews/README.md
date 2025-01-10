@@ -14,3 +14,6 @@
 🔥 **챌린지 참여합니다!** 🔥  
 프론트는 **넷플릭스 UI**를 참고해 구현하였고,  
 **장르 선택 기능**을 구현 완료했습니다! 😎
+
+# 피그마로 간단한 UI 제작
+https://www.figma.com/design/qAl3wGbT6RpAS4JuBlKTsT/%ED%94%BC%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-3%EC%A3%BC%EC%B0%A8-%EB%82%98%EB%A7%8C%EC%9D%98-%EC%98%81%ED%99%94-%EB%A6%AC%EB%B7%B0?node-id=0-1&p=f&m=dev
