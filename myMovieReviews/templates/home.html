@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>홈</title>
+  </head>
+  <style>
+    html {
+      background-color: black;
+    }
+    body {
+    }
+    header {
+      padding: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    button {
+      width: 16.625rem;
+      height: 4.1875rem;
+      flex-shrink: 0;
+      color: #e91e21;
+
+      font-family: "Pontano Sans";
+      font-size: 1.75rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    hr {
+      width: 95%;
+    }
+    .mainWrapper {
+      padding: 3rem;
+      padding-inline: 8rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 17rem);
+      justify-items: center;
+      row-gap: 1rem;
+      column-gap: 1rem;
+    }
+    .imageContainer {
+      width: 16.25rem;
+      height: 22.25rem;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .imageContainer img {
+      width: 100%;
+      height: 100%;
+    }
+    .infoContainer {
+      border-radius: 0.25rem;
+      background: rgba(217, 217, 217, 0.6);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      padding: 5px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    .title {
+      color: #09313e;
+      font-family: "Pontano Sans";
+      font-size: 2.25rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    .year,
+    .genre,
+    .star {
+      color: #242222;
+      font-family: "Pontano Sans";
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  </style>
+  <body>
+    <header>
+      <img src="images/My Movie Reviews.svg" />
+      <button>+Add a new Movie</button>
+    </header>
+    <hr />
+    <div class="mainWrapper">
+      <div class="imageContainer">
+        <img src="./images/eximage.png" />
+        <div class="infoContainer">
+          <div class="title">파묘</div>
+          <div class="year">개봉년도:</div>
+          <div class="genre">장르:</div>
+          <div class="star">별점:</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
