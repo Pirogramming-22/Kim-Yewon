@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상세</title>
+  </head>
+  <style>
+    html {
+      background-color: black;
+    }
+    ::-webkit-scrollbar {
+      display: none; /* 스크롤바 숨기기 (Chrome, Edge, Safari) */
+    }
+
+    -ms-overflow-style: none; /* 스크롤바 숨기기 (Internet Explorer) */
+    scrollbar-width: none; /* 스크롤바 숨기기 (Firefox) */
+    body {
+    }
+
+    header {
+      padding: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .addReviewButton {
+      width: 16.625rem;
+      height: 4.1875rem;
+      flex-shrink: 0;
+      color: #e91e21;
+      font-family: "Pontano Sans";
+      font-size: 1.75rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      cursor: pointer;
+    }
+    hr {
+      width: 95%;
+    }
+    .mainWrapper {
+      padding: 2rem;
+      margin: 0 auto;
+      width: 79.375rem;
+      height: 45.6875rem;
+      border-radius: 1.25rem;
+      background: #fff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    main img {
+      width: 25.5625rem;
+      height: 35.8125rem;
+    }
+    main {
+      display: flex;
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+    }
+    .title {
+      color: #e91e21;
+      font-family: "Pontano Sans";
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .editbtn {
+      color: rgba(88, 86, 86, 0.84);
+      font-family: "Pontano Sans";
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      cursor: pointer;
+    }
+    .infoContainer {
+      padding-inline: 2rem;
+    }
+    .info {
+      padding: 1rem;
+    }
+    .info span:nth-child(1) {
+      color: #ee5356;
+      font-family: "Pontano Sans";
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    .reviewContainer {
+      border-radius: 0.625rem;
+      background: #ffe3e3;
+      box-shadow: 2px 7px 7px 0px rgba(0, 0, 0, 0.36);
+      width: 45.4375rem;
+      height: 9.3125rem;
+      padding: 1rem;
+      word-break: break-all;
+    }
+    .logo {
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    {% load static %}
+    <header>
+      <img
+        class="logo"
+        onclick="location.href='{% url 'board:home' %}'"
+        src="{% static 'images/logo.svg' %}"
+      />
+      <button
+        class="addReviewButton"
+        onclick="location.href='{% url 'board:review_create' %}'"
+      >
+        +Add a new Movie
+      </button>
+    </header>
+    <hr />
+    <div class="mainWrapper">
+      <div class="top">
+        <span class="title">{{ movie.title }}</span>
+        <span class="editbtn">
+          <button
+            onclick="location.href='{% url 'board:board_update' movie.pk %}'"
+          >
+            수정
+          </button>
+
+          <form action="{% url 'board:board_delete' movie.pk%}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-delete">삭제</button>
+          </form>
+        </span>
+      </div>
+      <main>
+        {% if movie.image %}
+        <img src="{{ movie.image.url }}" alt="Uploaded Image" />
+        {% else %}
+        <img src="{% static 'images/eximage.png' %}" alt="Default Image" />
+        {% endif %}
+        <div class="infoContainer">
+          <div class="info">
+            <span id="year">개봉년도</span>
+            <span>{{ movie.year }}1</span>
+          </div>
+          <div class="info">
+            <span id="director">감독</span>
+            <span>{{ movie.director }}</span>
+          </div>
+          <div class="info">
+            <span id="actor">배우</span>
+            <span>{{ movie.actor }}</span>
+          </div>
+          <div class="info">
+            <span id="genre">장르</span>
+            <span>{{ movie.genre }}</span>
+          </div>
+          <div class="info">
+            <span id="star">별점</span>
+            <span>{{ movie.star }}</span>
+          </div>
+          <div class="info">
+            <span id="runningtime">러닝타임</span>
+            <span>{{ movie.runningtime }}</span>
+          </div>
+          <div class="info">
+            <div class="reviewContainer">
+              <span id="review">나의 리뷰</span>
+              <div>{{ movie.review }}</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
