@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수정</title>
+  </head>
+  <style>
+    html {
+      background-color: black;
+    }
+    ::-webkit-scrollbar {
+  display: none; /* 스크롤바 숨기기 (Chrome, Edge, Safari) */
+}
+
+
+    header {
+      padding: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    button {
+      width: 16.625rem;
+      height: 4.1875rem;
+      flex-shrink: 0;
+      color: #e91e21;
+      font-family: "Pontano Sans";
+      font-size: 1.75rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      cursor: pointer;
+    }
+    hr {
+      width: 95%;
+    }
+
+    form {
+      background-color: white;
+      width: 52.8125rem;
+      min-height: 47.0625rem;
+      border-radius: 1.25rem;
+      background: #fff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      margin: 0 auto;
+      padding: 2rem;
+      color: #ee5356;
+      font-family: "Pontano Sans";
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      position: relative;
+    }
+    .info {
+      padding: 1rem;
+      position: relative;
+    }
+    input,
+    select {
+      border-radius: 0.625rem;
+      border: 1px solid #ee5356;
+      height: 2.3125rem;
+      position: absolute;
+      left: 9rem;
+    }
+    #title,
+    #year {
+      width: 27.375rem;
+    }
+    textarea {
+      border-radius: 0.625rem;
+      border: 1px solid #ee5356;
+      width: 50.75rem;
+      height: 8.25rem;
+    }
+    button{
+       cursor: pointer;
+    }
+    .btn {
+      border-radius: 0.625rem;
+      background: #ee5356;
+      width: 8.0625rem;
+      height: 2.625rem;
+      color: #fff;
+      font-family: "Pontano Sans";
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      border: none;
+      position: absolute;
+      right: 2rem;
+      bottom:2rem;
+      cursor: pointer;
+    }
+    img{
+       cursor: pointer;
+    }
+  </style>
+  <body>
+    {% load static %}
+    <header>
+      <img  onclick="location.href='{% url 'board:home' %}'" src="{% static 'images/logo.svg' %}" />
+      <button onclick="location.href='{% url 'board:review_create' %}'">
+        +Add a new Movie
+      </button>
+    </header>
+    <hr />
+   <form
+  action="{% if movie %}{% url 'board:board_update' movie.pk %}{% else %}{% url 'board:review_create' %}{% endif %}"
+  method="post"
+  class="reviewWrapper"
+  enctype="multipart/form-data"
+>
+  {% csrf_token %}
+  <div class="info">
+    <label for="title" class="form-label">제목</label>
+    <input
+      type="text"
+      name="title"
+      class="form-control"
+      id="title"
+      value="{{ movie.title|default:'' }}"
+      placeholder="제목을 입력하세요"
+    />
+    </div>
+    <div class="info">
+    <label for="image">이미지</label>
+    <input type="file" name="image" id="image" />
+    {% if movie.image %}
+      <p>현재 이미지:</p>
+      <img src="{{ movie.image.url }}" alt="이미지" style="max-width: 200px;" />
+    {% endif %}
+  </div>
+  <div class="info">
+    <label for="year" class="form-label">개봉년도</label>
+    <input
+      type="text"
+      name="year"
+      class="form-control"
+      id="year"
+      value="{{ movie.year|default:'' }}"
+      placeholder="개봉년도를 입력하세요"
+    />
+  </div>
+  <div class="info">
+    <label for="genre" class="form-label">장르</label>
+    <select name="genre" id="genre" class="form-control">
+      <option value="액션" {% if movie.genre == "액션" %}selected{% endif %}>액션</option>
+      <option value="코미디" {% if movie.genre == "코미디" %}selected{% endif %}>코미디</option>
+      <option value="드라마" {% if movie.genre == "드라마" %}selected{% endif %}>드라마</option>
+      <option value="로맨스" {% if movie.genre == "로맨스" %}selected{% endif %}>로맨스</option>
+      <option value="스릴러" {% if movie.genre == "스릴러" %}selected{% endif %}>스릴러</option>
+      <option value="공포" {% if movie.genre == "공포" %}selected{% endif %}>공포</option>
+      <option value="SF" {% if movie.genre == "SF" %}selected{% endif %}>SF</option>
+      <option value="판타지" {% if movie.genre == "판타지" %}selected{% endif %}>판타지</option>
+      <option value="애니메이션" {% if movie.genre == "애니메이션" %}selected{% endif %}>애니메이션</option>
+      <option value="다큐멘터리" {% if movie.genre == "다큐멘터리" %}selected{% endif %}>다큐멘터리</option>
+      <option value="가족" {% if movie.genre == "가족" %}selected{% endif %}>가족</option>
+      <option value="모험" {% if movie.genre == "모험" %}selected{% endif %}>모험</option>
+      <option value="범죄" {% if movie.genre == "범죄" %}selected{% endif %}>범죄</option>
+      <option value="미스터리" {% if movie.genre == "미스터리" %}selected{% endif %}>미스터리</option>
+      <option value="음악" {% if movie.genre == "음악" %}selected{% endif %}>음악</option>
+      <option value="전쟁" {% if movie.genre == "전쟁" %}selected{% endif %}>전쟁</option>
+      <option value="서부극" {% if movie.genre == "서부극" %}selected{% endif %}>서부극</option>
+      <option value="역사" {% if movie.genre == "역사" %}selected{% endif %}>역사</option>
+      <option value="스포츠" {% if movie.genre == "스포츠" %}selected{% endif %}>스포츠</option>
+    </select>
+  </div>
+  <div class="info">
+    <label for="star" class="form-label">별점</label>
+    <input
+      type="text"
+      name="star"
+      class="form-control"
+      id="star"
+      value="{{ movie.star|default:'' }}"
+      placeholder="5점 만점"
+    />
+  </div>
+  <div class="info">
+    <label for="runningtime" class="form-label">러닝타임</label>
+    <input
+      type="text"
+      name="runningtime"
+      class="form-control"
+      id="runningtime"
+      value="{{ movie.runningtime|default:'' }}"
+      placeholder="러닝타임을 입력하세요"
+    />
+  </div>
+  <div class="info">
+    <label for="review" class="form-label">리뷰</label>
+    <textarea
+      name="review"
+      class="form-control"
+      id="review"
+      placeholder="리뷰 내용을 입력하세요"
+    >{{ movie.review|default:'' }}</textarea>
+  </div>
+  <div class="info">
+    <label for="director" class="form-label">감독</label>
+    <input
+      type="text"
+      name="director"
+      class="form-control"
+      id="director"
+      value="{{ movie.director|default:'' }}"
+      placeholder="감독을 입력하세요"
+    />
+  </div>
+  <div class="info">
+    <label for="actor" class="form-label">배우</label>
+    <input
+      type="text"
+      name="actor"
+      class="form-control"
+      id="actor"
+      value="{{ movie.actor|default:'' }}"
+      placeholder="배우를 입력하세요"
+    />
+  </div>
+  <button type="submit" class="btn btnSubmit">저장</button>
+</form>
+
+
+  </body>
+</html>
